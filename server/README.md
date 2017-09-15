@@ -8,4 +8,4 @@
 - Express
 - BodyParser (it allows to process JSON files easily)
 - cors 
-- 
+- Morgan
