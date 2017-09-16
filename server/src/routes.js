@@ -1,7 +1,7 @@
+// Controllers are used for declaring all the endpoint
+const AuthController = require('./controllers/AuthController')
+
 module.exports = (app) => {
-  app.post('/register', (req, res) => {
-    res.send({
-      message: `Hello ${req.body.email} Your user was registered! Enjoy`
-    })
-  })
+  app.post('/register',
+    AuthController.register)
 }
