@@ -5,7 +5,8 @@
 - EsLint (it forces EsLinst code style)
 
 ### Required Depenedencies  
-- Express
-- BodyParser (it allows to process JSON files easily)
-- cors 
-- Morgan
+- [Express]()
+- [BodyParser]() (it allows to process JSON files easily)
+- [cors]()
+- [Morgan]()
+- [Sequlize]()
