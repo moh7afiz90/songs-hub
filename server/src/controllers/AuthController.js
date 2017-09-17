@@ -13,6 +13,11 @@ module.exports = {
   async register (req, res) {
     try {
       const user = await User.create(req.body)
+      const userJson = user.toJson()
+      res.send({
+        user: userJson,
+        token: jwtSignUser(userJson)
+      })
       res.send(user.toJSON())
     } catch (err) {
       res.status(400).send({
