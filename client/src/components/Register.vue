@@ -13,12 +13,6 @@
               light
             >
             </v-text-field>
-            <!-- <input 
-              type="email" 
-              name="email"
-              v-model="email"
-              placeholder="Email"  /> -->
-            <br>
             <v-text-field
               name="password"
               label="Password"
@@ -26,13 +20,7 @@
               light
             >
             </v-text-field>
-            <!-- <input 
-              type="password" 
-              name="passowrd"
-              v-model="password" 
-              placeholder="Password"
-            /> -->
-            <br>
+<!--             
             <v-alert
               error
               v-model="error"
@@ -40,18 +28,16 @@
               light
               transition="scale-transition"
             >
-            </v-alert>
+            </v-alert> -->
             <!-- <div class="error" v-html="error"></div> -->
-            <div class="text-xs-center">
-              <v-btn
+            <v-btn
               round primary dark
               class="blue darken-3"
               @click="register">
-              Register</v-btn>
-            </div>
-            
+              Register
+            </v-btn>
+            </div>  
           </div>
-      </div>
     </v-flex>
   </v-layout>
 </template>
@@ -83,7 +69,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- .error{
+ /* .error{
    color:red;
- }
+ } */
 </style>

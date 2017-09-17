@@ -5,11 +5,13 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import guitarAcoustic from 'vue-material-design-icons/guitar-acoustic.vue'
 
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
 
+Vue.component('guitar-acoustic', guitarAcoustic)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
