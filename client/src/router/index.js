@@ -22,7 +22,6 @@ export default new Router({
       component: Register
     },
     {
-      // navigation path
       path: '/login',
       // Used for routing
       name: 'login',
