@@ -14,12 +14,12 @@
             >
             </v-text-field>
             <v-text-field
-              name="password"
               label="Password"
+              type="password"
               v-model="password"
+              autocomplete="new-password"
               light
-            >
-            </v-text-field>
+            ></v-text-field>
 <!--             
             <v-alert
               error
