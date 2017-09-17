@@ -1,26 +1,59 @@
 <template>
-  <div>
-    <h1>Register Component</h1>
-    <br>
-    <input 
-        type="email" 
-        name="email"
-        v-model="email"
-        placeholder="Email"  />
-    <br>
-    <input 
-        type="password" 
-        name="passowrd"
-        v-model="password" 
-        placeholder="Password"
-    />
-    <br>
-    <div class="error" v-html="error"></div>
-    <button
-      @click="register">
-     Register</button>
-    
-  </div>
+  <v-layout column>
+    <v-flex xs6 offset-xs3>
+      <div class="white elevation-2">
+        <v-toolbar flat dense class="blue darken-3" dark>
+          <v-toolbar-title>Register</v-toolbar-title>
+        </v-toolbar>
+            <div class="pl-4 pr-4 pt-2 pb-2">
+            <v-text-field
+              name="password"
+              label="Email"
+              v-model="email"
+              light
+            >
+            </v-text-field>
+            <!-- <input 
+              type="email" 
+              name="email"
+              v-model="email"
+              placeholder="Email"  /> -->
+            <br>
+            <v-text-field
+              name="password"
+              label="Password"
+              v-model="password"
+              light
+            >
+            </v-text-field>
+            <!-- <input 
+              type="password" 
+              name="passowrd"
+              v-model="password" 
+              placeholder="Password"
+            /> -->
+            <br>
+            <v-alert
+              error
+              v-model="error"
+              dismissible
+              light
+              transition="scale-transition"
+            >
+            </v-alert>
+            <!-- <div class="error" v-html="error"></div> -->
+            <div class="text-xs-center">
+              <v-btn
+              round primary dark
+              class="blue darken-3"
+              @click="register">
+              Register</v-btn>
+            </div>
+            
+          </div>
+      </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
