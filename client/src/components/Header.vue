@@ -10,7 +10,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
       <v-toolbar-item class="hidden-sm-and-down">
-          <v-btn @click="navigateTo('')">Login</v-btn>
+          <v-btn @click="navigateTo('login')">Login</v-btn>
           <v-btn @click="navigateTo({name: 'register'})">Sign Up</v-btn>
       </v-toolbar-item>
   </v-toolbar>
