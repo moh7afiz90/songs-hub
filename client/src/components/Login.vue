@@ -33,7 +33,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import AuthService from '@/services/AuthService'
 export default {
   data () {
@@ -55,9 +54,6 @@ export default {
       }
     }
   }
-=======
-export default {
->>>>>>> 2744ad9e90af792027a57f63c444c557dd65cce3
 }
 </script>
 
