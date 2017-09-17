@@ -11,3 +11,4 @@
 - [Morgan]()
 - [Sequlize]()
 - [Joi]() Framework used for validating req.body & req.queor & req.params(parameters)
+- [JsonWebToken]()
