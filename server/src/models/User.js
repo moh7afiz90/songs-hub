@@ -1,6 +1,5 @@
 const Promise = require('bluebird')
 const bcrypt = Promise.promisifyAll(require('bcrypt-nodejs'))
-
 // To generate JWToken
 function hashPassword (user, options) {
   const SALT_FACTOR = 8
