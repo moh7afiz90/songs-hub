@@ -6,6 +6,7 @@
           <v-toolbar-title>Register</v-toolbar-title>
         </v-toolbar>
             <div class="pl-4 pr-4 pt-2 pb-2">
+              <!-- Atucomplete off to avoid filling out the form in the fields -->
             <form 
               name="tab-tracker-form"
               autocomplete="off">
