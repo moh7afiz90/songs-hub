@@ -8,7 +8,7 @@
           <v-btn 
             flat 
             light
-            @click="navigateTo({name: 'song'})"
+            @click="navigateTo({name: 'songs'})"
             >Browse</v-btn>
       </v-toolbar-item>
       <v-spacer></v-spacer>
