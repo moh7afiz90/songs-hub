@@ -6,9 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     album: DataTypes.STRING,
     albumImageUrl: DataTypes.STRING,
     youtubeId: DataTypes.STRING,
-    // Because String limited to 255 charcter thats why we need text
     lyrics: DataTypes.TEXT,
     tab: DataTypes.TEXT
   })
+
   return Song
 }
