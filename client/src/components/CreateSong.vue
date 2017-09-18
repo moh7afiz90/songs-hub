@@ -1,0 +1,98 @@
+<template>
+  <v-layout>
+    <v-flex xs4>
+      <panel title="Song Metadata">
+        <v-text-field
+          label="Title"
+          v-model="title"
+          light
+        ></v-text-field>
+
+        <v-text-field
+          label="Artist"
+          v-model="artist"
+          light
+        ></v-text-field>
+
+        <v-text-field
+          label="Genre"
+          v-model="genre"
+          light
+        ></v-text-field>
+
+        <v-text-field
+          label="Album"
+          v-model="album"
+          light
+        ></v-text-field>
+
+        <v-text-field
+          label="Album Image Url"
+          v-model="albumImageUrl"
+          light
+        ></v-text-field>
+
+        <v-text-field
+          label="YouTube ID"
+          v-model="youtubeId"
+          light
+        ></v-text-field>
+
+      </panel>
+    </v-flex>
+    <v-flex xs8>
+      <panel title="Song Structure" class="ml-4">
+        <v-text-field
+          label="Lyrics"
+          multi-line
+          v-model="lyrics"
+          light
+        ></v-text-field>
+
+        <v-text-field
+          label="Guitar Tab"
+          multi-line
+          v-model="tab"
+          light
+        ></v-text-field>
+      </panel>
+      <v-btn
+        round primary dark
+        class="blue darken-3"
+        @click="create">
+        Create Song
+      </v-btn>
+    </v-flex>
+  </v-layout>
+</template>
+
+<script>
+import Panel from '@/components/Panel'
+export default {
+  data () {
+    return {
+      title: null,
+      artist: null,
+      genre: null,
+      album: null,
+      albumImageUrl: null,
+      youtubeId: null,
+      lyrics: null,
+      tab: null
+    }
+  },
+  methods: {
+    create () {
+      // call API
+    }
+  },
+  components: {
+    Panel
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
