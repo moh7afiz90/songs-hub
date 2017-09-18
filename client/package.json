@@ -19,7 +19,8 @@
     "vue-material-design-icons": "^0.7.1",
     "vue-router": "^2.7.0",
     "vuetify": "^0.15.7",
-    "vuex": "^2.4.0"
+    "vuex": "^2.4.0",
+    "vuex-router-sync": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
