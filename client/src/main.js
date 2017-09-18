@@ -6,10 +6,13 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import guitarAcoustic from 'vue-material-design-icons/guitar-acoustic.vue'
-
+import { sync } from 'vuex-router-sync'
+import store from '@/store/store'
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
+
+sync(store, router)
 
 Vue.component('guitar-acoustic', guitarAcoustic)
 /* eslint-disable no-new */
