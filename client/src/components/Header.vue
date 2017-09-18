@@ -5,7 +5,11 @@
          <span class="home" @click="navigateTo({name: 'root'})">SongsHub</span>
       </v-toolbar-title>
       <v-toolbar-item>
-          <v-btn flat light>Browse</v-btn>
+          <v-btn 
+            flat 
+            light
+            @click="navigateTo({name: 'song'})"
+            >Browse</v-btn>
       </v-toolbar-item>
       <v-spacer></v-spacer>
       <v-toolbar-item class="hidden-sm-and-down">
