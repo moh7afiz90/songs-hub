@@ -1,12 +1,15 @@
 <template>
-  <v-app dark>
-    <div id="app">
-      <page-Header />
+  <div id="app">
+    <v-app dark>
+      <page-header />
+      
       <main>
-        <router-view></router-view>
+        <v-container fluid>
+          <router-view></router-view>
+        </v-container>
       </main>
-    </div>
-  </v-app>
+    </v-app>
+  </div>
 </template>
 
 <script>
@@ -20,9 +23,8 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
