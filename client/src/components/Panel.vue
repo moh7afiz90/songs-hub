@@ -13,17 +13,13 @@
 
 <script>
 export default {
-  data () {
-    return {
-      title: 'Helllo world'
-    }
-  }
-  
+  props: [
+    'title'
+  ]
 }
 </script>
 
 <style scoped>
-
 </style>
 
 
