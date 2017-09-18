@@ -19,6 +19,7 @@ Vue.component('guitar-acoustic', guitarAcoustic)
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
