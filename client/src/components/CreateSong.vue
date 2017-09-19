@@ -72,6 +72,9 @@
           :rules="[required]"
         ></v-text-field>
       </panel>
+      <div class="danger-alert" v-if="error">
+        {{error}}
+      </div>
       <v-btn
         round primary dark
         class="blue darken-3"
@@ -98,11 +101,21 @@ export default {
         lyrics: null,
         tab: null
       },
+      // For the fieldin fields when are empty
+      error: null,
       required: (value) => !!value || 'Required.'
     }
   },
   methods: {
     async create () {
+      // making sure all fields are fieldin
+      this.error = null
+      const areAllFieldsFilledIn = Object
+        .keys(this.song)
+        .every(key => !!this.song[key])
+      if (!areAllFieldsFilledIn) {
+        this.error = 'Please fill in all the required fields.'
+      }
       // call API
       try {
         await SongsService.post(this.song)
