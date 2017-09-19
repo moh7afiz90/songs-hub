@@ -22,17 +22,9 @@
           >
           </v-text-field>
         </form>
-          <!-- Error Message To be Implmeneted -->
-          <!--             
-          <v-alert
-            error
-            v-model="error"
-            dismissible
-            light
-            transition="scale-transition"
-          >
-          </v-alert> -->
-          <!-- <div class="error" v-html="error"></div> -->
+        <div class="danger-alert">
+          <h6><strong>{{error}}</strong></h6>
+        </div>
         <v-btn
           round primary dark
           class="blue darken-3"

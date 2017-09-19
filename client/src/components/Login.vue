@@ -16,6 +16,9 @@
           autocomplete="new-password"
           light
         ></v-text-field>
+        <div class="danger-alert">
+          <h6><strong>{{error}}</strong></h6>
+        </div>
         <v-btn
           round primary dark
           class="blue darken-3"

@@ -72,9 +72,12 @@
           :rules="[required]"
         ></v-text-field>
       </panel>
+      
+      <br>
       <div class="danger-alert" v-if="error">
-        {{error}}
+        <h6><strong>{{error}}</strong></h6>
       </div>
+      
       <v-btn
         round primary dark
         class="blue darken-3"
@@ -88,6 +91,7 @@
 <script>
 import Panel from '@/components/Panel'
 import SongsService from '@/services/SongsService'
+
 export default {
   data () {
     return {
@@ -115,6 +119,7 @@ export default {
         .every(key => !!this.song[key])
       if (!areAllFieldsFilledIn) {
         this.error = 'Please fill in all the required fields.'
+        return
       }
       // call API
       try {
