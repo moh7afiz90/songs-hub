@@ -4,37 +4,37 @@
       <panel title="Song Metadata">
         <v-text-field
           label="Title"
-          v-model="title"
+          v-model="song.title"
           light
         ></v-text-field>
 
         <v-text-field
           label="Artist"
-          v-model="artist"
+          v-model="song.artist"
           light
         ></v-text-field>
 
         <v-text-field
           label="Genre"
-          v-model="genre"
+          v-model="song.genre"
           light
         ></v-text-field>
 
         <v-text-field
           label="Album"
-          v-model="album"
+          v-model="song.album"
           light
         ></v-text-field>
 
         <v-text-field
           label="Album Image Url"
-          v-model="albumImageUrl"
+          v-model="song.albumImageUrl"
           light
         ></v-text-field>
 
         <v-text-field
           label="YouTube ID"
-          v-model="youtubeId"
+          v-model="song.youtubeId"
           light
         ></v-text-field>
 
@@ -45,14 +45,14 @@
         <v-text-field
           label="Lyrics"
           multi-line
-          v-model="lyrics"
+          v-model="song.lyrics"
           light
         ></v-text-field>
 
         <v-text-field
           label="Guitar Tab"
           multi-line
-          v-model="tab"
+          v-model="song.tab"
           light
         ></v-text-field>
       </panel>
@@ -68,22 +68,33 @@
 
 <script>
 import Panel from '@/components/Panel'
+import SongsService from '@/services/SongsService'
 export default {
   data () {
     return {
-      title: null,
-      artist: null,
-      genre: null,
-      album: null,
-      albumImageUrl: null,
-      youtubeId: null,
-      lyrics: null,
-      tab: null
+      song: {
+        title: null,
+        artist: null,
+        genre: null,
+        album: null,
+        albumImageUrl: null,
+        youtubeId: null,
+        lyrics: null,
+        tab: null
+      }
     }
   },
   methods: {
-    create () {
+    async create () {
       // call API
+      try {
+        await SongsService.post(this.song)
+        this.$router.push({
+          name: 'songs'
+        })
+      } catch (err) {
+        console.log(err)
+      }
     }
   },
   components: {
