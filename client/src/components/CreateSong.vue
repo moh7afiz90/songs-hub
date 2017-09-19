@@ -6,36 +6,48 @@
           label="Title"
           v-model="song.title"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
         <v-text-field
           label="Artist"
           v-model="song.artist"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
         <v-text-field
           label="Genre"
           v-model="song.genre"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
         <v-text-field
           label="Album"
           v-model="song.album"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
         <v-text-field
           label="Album Image Url"
           v-model="song.albumImageUrl"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
         <v-text-field
           label="YouTube ID"
           v-model="song.youtubeId"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
       </panel>
@@ -47,6 +59,8 @@
           multi-line
           v-model="song.lyrics"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
 
         <v-text-field
@@ -54,6 +68,8 @@
           multi-line
           v-model="song.tab"
           light
+          required
+          :rules="[required]"
         ></v-text-field>
       </panel>
       <v-btn
@@ -81,7 +97,8 @@ export default {
         youtubeId: null,
         lyrics: null,
         tab: null
-      }
+      },
+      required: (value) => !!value || 'Required.'
     }
   },
   methods: {
