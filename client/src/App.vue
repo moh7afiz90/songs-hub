@@ -1,23 +1,25 @@
 <template>
   <div id="app">
     <v-app dark>
-      <page-header />
-      
-      <main>
-        <v-container fluid>
-          <router-view></router-view>
-        </v-container>
-      </main>
+      <page-header />  
+        <main>
+          <v-container fluid>
+            <router-view></router-view>
+          </v-container>
+        </main>
+      <footer/>
     </v-app>
   </div>
 </template>
 
 <script>
 import PageHeader from '@/components/Header.vue'
+import Footernote from '@/components/Footernote.vue'
 export default {
   name: 'app',
   components: {
-    PageHeader
+    PageHeader,
+    Footernote
   }
 }
 </script>
