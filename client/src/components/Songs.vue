@@ -5,8 +5,8 @@
           <v-btn 
             slot="action"
             @click="navigateTo({name: 'songs-create'})"
-            class="blue darken-3"
-            dark
+            class="white"
+            light
             medium
             fab
             right
