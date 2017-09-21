@@ -13,7 +13,7 @@ export default {
   },
   async mounted () {
     const songId = this.$store.stat.route.params.songId
-    this.song = await SongsService.show(songId).data
+    this.song = (await SongsService.show(songId)).data
   }
 }
 </script>
