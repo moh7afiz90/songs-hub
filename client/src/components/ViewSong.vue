@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import SongsService from '@/components/Panel'
 import SongsService from '@/services/SongsService'
 export default {
   data () {
@@ -12,7 +13,7 @@ export default {
   },
   async mounted () {
     const songId = this.$store.stat.route.params.songId
-    this.song = await SongsService.show(songId)
+    this.song = await SongsService.show(songId).data
   }
 }
 </script>
