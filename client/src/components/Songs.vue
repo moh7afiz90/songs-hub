@@ -35,24 +35,24 @@
               </v-card-title>
               <div class="headline black--text">{{song.artist}}</div>
               <span class="grey--text">{{song.genre}}</span>
-              <v-card-action>
+              <v-card-actions>
                 <v-spacer></v-spacer>
                 <div class="text-xs-center">
                   <v-btn 
                    class="text-xs-center"
                    @click="navigateTo({
-                     name: 'song', 
-                     params: {
-                       songId: song.id
-                       }
-                     })"
+                    name: 'song', 
+                      params: {
+                      songId: song.id
+                      }
+                    })"
                    >
                   View
                   <br>
                   <i class="material-icons" large> pageview</i>
                 </v-btn>
                 </div>
-              </v-card-action>
+              </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
