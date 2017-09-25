@@ -3,5 +3,8 @@
 > A Vue.js project
 
 ## Build with
-- [Axios](https://github.com/mzabriskie/axios)
+- [Axios]()
+- [Vuex]()
+- [Vuetify] ()
+- [Lodash]()
  
