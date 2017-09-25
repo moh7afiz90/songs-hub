@@ -18,7 +18,15 @@ export default {
   },
   watch: {
     search (value) {
-      console.log(value)
+      const route = {
+        name: 'songs'
+      }
+      if (this.search !== '') {
+        route.query = {
+          search: this.search
+        }
+      }
+      this.$router.push(route)
     }
   }
 }
