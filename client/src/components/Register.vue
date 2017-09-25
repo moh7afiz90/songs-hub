@@ -57,6 +57,7 @@ export default {
         // Fetched from Store
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        // Function to direct user to songs page after registered
         this.$router.push({
           name: 'songs'
         })
