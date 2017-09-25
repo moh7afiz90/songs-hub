@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
    <v-flex xs8 offset-xs2>
-     <panel title="Songs">
+     <panel title="Songs List">
           <v-btn 
             slot="action"
             @click="navigateTo({name: 'songs-create'})"

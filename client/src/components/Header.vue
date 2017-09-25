@@ -4,21 +4,21 @@
       <v-toolbar-title class="mr-4">
          <span class="home" @click="navigateTo({name: 'root'})">SongsHub</span>
       </v-toolbar-title>
-      <v-toolbar-item>
+      <v-toolbar-items>
           <v-btn 
             flat 
             light
             @click="navigateTo({name: 'songs'})"
             >Browse</v-btn>
-      </v-toolbar-item>
+      </v-toolbar-items>
       <v-spacer></v-spacer>
-      <v-toolbar-item class="hidden-sm-and-down">
+      <v-toolbar-items class="hidden-sm-and-down">
           <v-btn 
             v-if="!$store.state.isUserLoggedIn"
             @click="navigateTo({name: 'login'})"
           >Login</v-btn>
-      </v-toolbar-item>
-      <v-toolbar-item class="hidden-sm-and-down">
+      </v-toolbar-items>
+      <v-toolbar-items class="hidden-sm-and-down">
           <v-btn 
             v-if="!$store.state.isUserLoggedIn"
             @click="navigateTo({name: 'register'})"
@@ -29,7 +29,7 @@
             >
               Logout
             </v-btn>
-      </v-toolbar-item>
+      </v-toolbar-items>
   </v-toolbar>
 </template>
 
