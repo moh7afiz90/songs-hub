@@ -10,5 +10,8 @@ export default {
   },
   post (song) {
     return API().post('songs', song)
+  },
+  put (song) {
+    return API().put(`songs/${song.id}`, song)
   }
 }

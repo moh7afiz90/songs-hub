@@ -11,6 +11,20 @@
         <div class="song-genre">
             {{song.genre}}
         </div>
+
+    <!-- Edit Song Button -->
+        <v-btn
+          round primary dark
+          class="blue darken-3"
+          @click="navigateTo({
+            name: 'song-edit',
+            params: {
+              songId: song.id
+            }
+          })"
+        >
+          Edit
+        </v-btn>
         </v-flex>
     <!-- Album Image Section -->
         <v-flex xs6>
@@ -28,6 +42,11 @@ export default {
   props: [
     'song'
   ],
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
+  },
   components: {
     Panel
   }
