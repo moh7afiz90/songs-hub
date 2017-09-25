@@ -25,7 +25,7 @@
             flat
             light
             v-if="!$store.state.isUserLoggedIn"
-            @click="navigateTo({name: 'register'})"
+            :to="{name: 'register'}"
             >Sign Up</v-btn>
             <v-btn
               v-if="$store.state.isUserLoggedIn"
