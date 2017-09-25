@@ -2,7 +2,7 @@
     <panel title="Songs List">
         <v-btn 
         slot="action"
-        @click="navigateTo({name: 'songs-create'})"
+        :to="({name: 'songs-create'})"
         class="white"
         light
         medium
@@ -38,12 +38,12 @@
             <div class="text-xs-center">
                 <v-btn 
                 class="text-xs-center"
-                @click="navigateTo({
-                name: 'song', 
-                    params: {
+                :to="{
+                  name: 'song',
+                  params: {
                     songId: song.id
-                    }
-                })"
+                  }
+                }"
                 >
                 View
                 <br>
@@ -64,11 +64,6 @@ export default {
   data () {
     return {
       songs: null
-    }
-  },
-  methods: {
-    navigateTo (route) {
-      this.$router.push(route)
     }
   },
   watch: {

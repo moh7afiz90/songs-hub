@@ -16,12 +16,12 @@
         <v-btn
           round primary dark
           class="blue darken-3"
-          @click="navigateTo({
+          :to="{
             name: 'song-edit',
             params: {
               songId: song.id
             }
-          })"
+          }"
         >
           Edit
         </v-btn>
@@ -40,12 +40,7 @@
 export default {
   props: [
     'song'
-  ],
-  methods: {
-    navigateTo (route) {
-      this.$router.push(route)
-    }
-  }
+  ]
 }
 </script>
 
