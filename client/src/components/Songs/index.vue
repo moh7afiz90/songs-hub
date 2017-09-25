@@ -1,7 +1,8 @@
 <template>
   <v-layout row wrap>
    <v-flex xs8 offset-xs2>
-     <songs-panel/>
+     <songs-search-panel class="mb-3"/>
+     <songs-panel />
    </v-flex>
   </v-layout>
 </template>
@@ -9,11 +10,11 @@
 <script>
 import SongsPanel from './SongsPanel'
 import SongsService from '@/services/SongsService'
-import Panel from '@/components/Panel'
+import SongsSearchPanel from './SongsSearchPanel'
 export default {
   components: {
-    Panel,
-    SongsPanel
+    SongsPanel,
+    SongsSearchPanel
   },
   data () {
     return {
