@@ -12,7 +12,25 @@
             {{song.genre}}
         </div>
 
-    <!-- Edit Song Button -->
+   
+      <!-- Bookmark button -->
+        <v-btn
+          v-if="isUserLoggedIn"
+          round primary dark
+          class="blue darken-3"
+          @click="bookmark"
+        >
+        Bookmark
+        </v-btn>
+        <v-btn
+          v-if="isUserLoggedIn"
+          round primary dark
+          class="blue darken-3"
+          @click="unBookmark"
+        >
+        UnBookmark
+        </v-btn>
+         <!-- Edit Song Button -->
         <v-btn
           round primary dark
           class="blue darken-3"
@@ -39,10 +57,24 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   props: [
     'song'
-  ]
+  ],
+  computed: {
+    ...mapState([
+      'isUserLoggedIn'
+    ])
+  },
+  methods: {
+    bookmark () {
+      console.log('bookmark')
+    },
+    unBookmark () {
+      console.log('Unbookmark')
+    }
+  }
 }
 </script>
 

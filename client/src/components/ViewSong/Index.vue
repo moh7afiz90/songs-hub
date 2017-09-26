@@ -11,7 +11,7 @@
   </v-layout>
   <!-- Right Panel -->
   <v-layout>
-    <v-flex xs6 class="ml-2 mt-2">
+    <v-flex xs6 class="mt-2">
       <tab :song="song"></tab>
     </v-flex>
 
