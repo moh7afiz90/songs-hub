@@ -57,15 +57,15 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import BookmarkService from '@/services/BookmarkService'
+import {mapState} from 'vuex'
+import BookmarksService from '@/services/BookmarksService'
 export default {
   props: [
     'song'
   ],
   data () {
     return {
-      isBookmarked: false
+      bookmark: false
     }
   },
   computed: {
@@ -73,20 +73,41 @@ export default {
       'isUserLoggedIn'
     ])
   },
-  async mounted () {
-    const bookmark = (await BookmarkService.index({
-      songId: 1,
-      userId: 1
-    })).data
-    this.isBookmarked = !!bookmark
-    console.log('bookmark', this.isBookmarked)
+  watch: {
+    async song (value) {
+      if (!this.isUserLoggedIn) {
+        return
+      }
+      try {
+        const query = {
+          songId: this.song.id,
+          userId: this.$store.state.user.id
+        }
+        this.bookmark = (await BookmarksService.index(query)).data
+      } catch (err) {
+        console.log(err)
+      }
+    }
   },
   methods: {
-    bookmark () {
-      console.log('bookmark')
+    async setAsBookmark () {
+      try {
+        const bookmark = {
+          songId: this.song.id,
+          userId: this.$store.state.user.id
+        }
+        this.bookmark = (await BookmarksService.post(bookmark)).data
+      } catch (err) {
+        console.log(err)
+      }
     },
-    unBookmark () {
-      console.log('Unbookmark')
+    async unsetAsBookmark () {
+      try {
+        await BookmarksService.delete(this.bookmark.id)
+        this.bookmark = null
+      } catch (err) {
+        console.log(err)
+      }
     }
   }
 }
@@ -109,7 +130,8 @@ export default {
     font-size: 18px;
   }
   .album-image{
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
+    height: 310px;
   }
 </style>
