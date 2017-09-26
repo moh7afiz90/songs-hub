@@ -1,3 +1,4 @@
+// Go inside seed file and run "npm run seed" to drop everything on our database
 const {
   sequelize,
   Song,
