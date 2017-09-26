@@ -2,7 +2,7 @@
   <!-- fixed in all down the page -->
   <v-toolbar fixed class="blue darken-3">
       <v-toolbar-title class="mr-4">
-         <span class="home" @click="navigateTo({name: 'root'})">SongsHub</span>
+         <span class="home" :to="{name: 'root'}">SongsHub</span>
       </v-toolbar-title>
       <v-toolbar-items>
           <v-btn 

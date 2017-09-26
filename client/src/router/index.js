@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import LandingPage from '@/components/LandingPage'
 import Register from '@/components/register'
 import Login from '@/components/login'
 import Songs from '@/components/Songs/index'
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'root',
-      component: Hello
+      component: LandingPage
     },
     {
       // navigation path
@@ -49,6 +49,10 @@ export default new Router({
       path: '/songs/:songId/edit',
       name: 'song-edit',
       component: EditSong
+    },
+    {
+      path: '*',
+      redirect: 'songs'
     }
   ]
 })
