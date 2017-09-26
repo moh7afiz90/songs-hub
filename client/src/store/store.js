@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import createPersistedState from 'vuex-persistedstate'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
 // It can never be modified unless through action or mutation
   strict: true,
+  plugins: [createPersistedState()],
   state: {
     token: null,
     user: null,

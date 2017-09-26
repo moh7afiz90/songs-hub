@@ -7,4 +7,4 @@
 - [Vuex]()
 - [Vuetify] ()
 - [Lodash]()
- 
+- [Vuex-persistedstate]() used for localstorage
